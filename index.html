@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lotus Matter | Cement, lime, biomass. One particle.</title>
+<meta name="description" content="A durable carbon capture particle, and the capture system built around it, for every industry that runs hot.">
+<meta property="og:title" content="Lotus Matter | Cement, lime, biomass. One particle.">
+<meta property="og:description" content="A durable carbon capture particle, and the capture system built around it, for every industry that runs hot.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Archivo+Narrow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --white:#FFFFFF; --cream:#FBFBF8; --stone:#F3F5F2; --sky:#DCEBF1; --peach:#F7E2D8;
+  --ink:#15202b; --ink-2:#1E2D3A;
+  --blue:#3290b5; --blue-dp:#1F6B8C; --blue-lt:#8FC4DB;
+  --rust:#14878C; --rust-lt:#5FC2C4; --rust-dk:#0B6165; --hero-hl:#5FC2C4; --warm-bg:#F1F8F8; --hot-dk:#0F2B2C;
+  --heat:#BF4519; --heat-lt:#FF9461; --heat-bg:#F7E2D8;
+  --muted:#4E5A63; --faint:#6E7680; --line:#D3D9D7; --line-2:#E6EAE8;
+  --pad:clamp(20px,5vw,72px); --wrap:1280px;
+  --fs-hero:clamp(40px,5.6vw,82px);
+  --fs-h2:clamp(32px,4.4vw,62px);
+  --fs-h3:clamp(21px,2vw,30px);
+  --fs-lead:clamp(17px,1.45vw,21px);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--white);color:var(--ink);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+img,video{max-width:100%;display:block;}
+h1,h2,h3{margin:0;color:var(--ink);text-wrap:balance;}
+h1{font-family:"Big Shoulders Display",Impact,sans-serif;font-size:var(--fs-hero);line-height:.92;font-weight:700;letter-spacing:-.01em;}
+h2{font-family:"Archivo Narrow",Arial Narrow,sans-serif;font-size:var(--fs-h2);line-height:1.04;font-weight:600;letter-spacing:-.015em;}
+h3{font-family:"Archivo Narrow",Arial Narrow,sans-serif;font-size:var(--fs-h3);line-height:1.12;font-weight:600;}
+p{margin:0;}
+a{color:inherit;}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
+.eyebrow{font-family:Inter,sans-serif;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--heat);}
+.num{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:700;line-height:.9;letter-spacing:0;font-variant-numeric:tabular-nums;}
+section{padding:clamp(72px,9vw,142px) 0;}
+.s-white{background:var(--white);} .s-cream{background:var(--cream);}
+.s-stone{background:var(--stone);} .s-sky{background:var(--sky);}
+.s-ink{background:var(--ink);color:#E7EDF0;}
+.s-ink h2,.s-ink h3{color:#fff;} .s-ink .eyebrow{color:var(--heat-lt);}
+.head{display:flex;flex-direction:column;gap:16px;max-width:900px;}
+.lead{font-size:var(--fs-lead);line-height:1.5;max-width:64ch;color:var(--muted);}
+.s-ink .lead{color:#A8BCC7;}
+
+/* reveal */
+.rv{opacity:1;}
+@media (prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+  .rv.in{opacity:1;transform:none;}
+}
+
+/* nav */
+.nav{position:fixed;top:18px;left:0;right:0;z-index:50;pointer-events:none;}
+.nav .wrap{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;height:80px;
+  max-width:calc(var(--wrap) - 2*clamp(0px,2vw,24px));margin:0 auto;padding:0 14px 0 26px;
+  background:rgba(255,255,255,.74);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);
+  border:1px solid rgba(255,255,255,.55);border-radius:18px;box-shadow:0 10px 34px rgba(8,14,19,.16);
+  transition:background-color .35s var(--ease),box-shadow .35s var(--ease);}
+@media (max-width:1328px){.nav .wrap{margin:0 clamp(12px,3vw,40px);}}
+.nav.solid .wrap{background:rgba(255,255,255,.92);box-shadow:0 8px 28px rgba(8,14,19,.10);border-color:var(--line-2);}
+.brand{display:flex;align-items:center;text-decoration:none;flex:none;}
+.brand img{height:56px;width:auto;display:block;}
+.nav ul{display:flex;gap:34px;list-style:none;margin:0 auto;padding:0;align-items:center;}
+.nav ul a{color:var(--ink);text-decoration:none;font-size:16.5px;font-weight:500;position:relative;padding:6px 0;}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--rust);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);}
+.nav ul a:hover::after,.nav ul a[aria-current="page"]::after{transform:scaleX(1);}
+.navcta{display:inline-flex;align-items:center;gap:10px;background:var(--rust);color:#fff;height:50px;padding:0 20px 0 22px;border-radius:12px;font-weight:600;font-size:16px;text-decoration:none;white-space:nowrap;transition:background-color .25s;}
+.navcta i{font-style:normal;transition:transform .25s var(--ease);}
+.navcta:hover{background:var(--rust-dk);} .navcta:hover i{transform:translateX(3px);}
+@media (max-width:1120px){.nav ul li.hide-sm{display:none;}}
+@media (max-width:600px){.nav{top:10px;}.nav .wrap{height:64px;padding:0 8px 0 14px;border-radius:14px;margin:0 10px;}.brand img{height:42px;}.navcta{height:44px;padding:0 14px;font-size:14.5px;}.navcta i{display:none;}}
+
+/* hero: four-beat video sequence */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:#0E1720;isolation:isolate;}
+.hero .clip{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease;z-index:-3;}
+.hero .clip.on{opacity:1;}
+@media (prefers-reduced-motion:no-preference){.hero .clip.on{animation:heroPush 7s ease-out both;}}
+@keyframes heroPush{from{transform:scale(1.0)}to{transform:scale(1.05)}}
+.hero .scrim{position:absolute;inset:0;z-index:-2;background:linear-gradient(to top,rgba(10,18,24,.92) 0%,rgba(10,18,24,.66) 30%,rgba(10,18,24,.2) 60%,rgba(10,18,24,.55) 100%);}
+.hero::before{content:"";position:absolute;left:0;right:0;top:0;height:170px;z-index:-1;background:linear-gradient(to bottom,rgba(8,14,19,.35) 0%,rgba(8,14,19,0) 100%);pointer-events:none;}
+.hero .scrim2{position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,rgba(10,18,24,.62) 0%,rgba(10,18,24,.14) 56%,rgba(10,18,24,0) 100%);}
+.hero .wrap{position:relative;width:100%;padding-top:170px;padding-bottom:clamp(52px,7vw,92px);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;}
+.hero .inner{max-width:780px;}
+.hero .label{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--heat-lt);}
+.hero h1{font-family:"Archivo Narrow",Arial Narrow,sans-serif;font-weight:500;color:#fff;font-size:clamp(40px,5vw,68px);line-height:1.03;letter-spacing:-.02em;margin-top:18px;text-shadow:0 2px 24px rgba(6,12,16,.35);}
+.hero h1 span{display:block;}
+.hero h1 .one{color:var(--hero-hl,#FF9461);}
+.hero .sub{margin-top:20px;font-size:clamp(16px,1.35vw,19px);line-height:1.55;color:#D2E1E8;max-width:44ch;}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+.btn{display:inline-block;padding:13px 24px;border-radius:3px;font-weight:600;font-size:15.5px;text-decoration:none;transition:background-color .2s,border-color .2s,color .2s;}
+.btn--p{background:var(--rust);color:#fff;} .btn--p:hover{background:var(--rust-dk,#A33A13);}
+.btn--g{border:1px solid rgba(255,255,255,.42);color:#fff;background:rgba(255,255,255,.04);}
+.btn--g:hover{border-color:#fff;background:rgba(255,255,255,.12);}
+.hero .beat{min-width:250px;text-align:right;}
+.hero .cap{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.06em;color:#C9DAE2;min-height:38px;transition:opacity .5s ease;}
+.hero .cap b{display:block;color:#fff;font-weight:500;font-size:13px;margin-bottom:4px;}
+.hero .bars{display:flex;gap:6px;justify-content:flex-end;margin-top:14px;}
+.hero .bars span{width:52px;height:2px;background:rgba(255,255,255,.22);overflow:hidden;}
+.hero .bars i{display:block;height:100%;width:0;background:#fff;}
+@media (max-width:760px){.hero .beat{text-align:left;min-width:0;}.hero .bars{justify-content:flex-start;}}
+
+/* stat strip under hero */
+.statstrip{background:var(--ink-2);color:#fff;}
+.statstrip .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}
+.statstrip .wrap > div{padding:34px 36px 38px;border-left:1px solid #2C3D4B;display:flex;flex-direction:column;}
+.statstrip .wrap > div:first-child{border-left:none;padding-left:0;}
+.statstrip .k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--heat-lt);}
+.statstrip .k em{font-style:normal;color:#7F95A3;letter-spacing:.12em;}
+.statstrip b{display:block;margin-top:14px;font-family:"Archivo Narrow",sans-serif;font-weight:500;font-size:clamp(44px,4.4vw,64px);line-height:1;letter-spacing:-.01em;color:#fff;}
+.statstrip b small{font-size:.5em;font-weight:500;margin-left:3px;letter-spacing:0;}
+.statstrip b.hot{color:var(--rust-lt);}
+.statstrip p{font-size:15px;line-height:1.5;color:#A8BCC7;margin-top:12px;max-width:30ch;}
+@media (max-width:760px){.statstrip .wrap{grid-template-columns:1fr;}.statstrip .wrap > div{border-left:none;border-top:1px solid #2C3D4B;padding:26px 0;}.statstrip .wrap > div:first-child{border-top:none;}}
+
+/* supporters */
+.supp{background:var(--white);border-bottom:1px solid var(--line-2);padding:34px 0;}
+.supp .l{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);text-align:center;}
+.supp .logos{margin-top:20px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px clamp(24px,4vw,50px);}
+.supp .logos img{width:auto;object-fit:contain;}
+.l1{height:46px;} .l2{height:52px;} .l3{height:38px;} .l4{height:36px;} .l5{height:42px;} .l6{height:44px;} .l7{height:50px;}
+
+/* split */
+.split{display:grid;gap:clamp(30px,4vw,64px);grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;margin-top:clamp(40px,5vw,66px);}
+.split.wide-r{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);align-items:start;}
+@media (max-width:940px){.split,.split.wide-r{grid-template-columns:1fr;}}
+figure{margin:0;}
+.ph{border-radius:6px;overflow:hidden;background:var(--ink);}
+.ph img{width:100%;height:auto;transition:transform 9s var(--ease);}
+.ph:hover img{transform:scale(1.06);}
+figcaption{margin-top:11px;font-size:12px;letter-spacing:.04em;color:var(--faint);}
+.photopair{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.photopair .ph{aspect-ratio:3/5;}
+.photopair .ph img{width:100%;height:100%;object-fit:cover;}
+
+/* feature list */
+.feats{display:flex;flex-direction:column;}
+.feat{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line);}
+.feat:last-child{border-bottom:1px solid var(--line);}
+.s-ink .feat{border-color:#2C3D4B;}
+.feat .n{font-family:"Big Shoulders Display",sans-serif;font-size:22px;font-weight:700;color:var(--blue);padding-top:2px;}
+.s-ink .feat .n{color:var(--blue-lt);}
+.feat p{margin-top:7px;font-size:15.5px;color:var(--muted);}
+.s-ink .feat p{color:#A8BCC7;}
+
+/* stat tiles */
+.tiles{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:clamp(34px,4vw,52px);}
+.tile{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:8px;}
+.tile.hot{border:2px solid var(--rust);background:var(--warm-bg,#FFFAF6);}
+.tile b{font-family:"Big Shoulders Display",sans-serif;font-size:clamp(38px,3.6vw,50px);font-weight:700;line-height:1;color:var(--ink);}
+.tile.hot b{color:var(--rust);}
+.tile p{font-size:15px;color:var(--muted);}
+.tile--txt b{font-family:"Archivo Narrow",Arial Narrow,sans-serif;font-size:clamp(21px,1.9vw,26px);line-height:1.1;font-weight:600;letter-spacing:-.01em;}
+.s-ink .tile{background:var(--ink-2);border-color:#2C3D4B;}
+.s-ink .tile b{color:#fff;} .s-ink .tile p{color:#A8BCC7;}
+
+/* diagram */
+.dwrap{margin-top:clamp(34px,4vw,56px);overflow-x:auto;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,2.4vw,32px);}
+.s-ink .dwrap{background:var(--ink-2);border-color:#2C3D4B;}
+.dia{width:100%;min-width:720px;height:auto;display:block;}
+
+/* units */
+.units{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:clamp(32px,4vw,48px);}
+@media (max-width:780px){.units{grid-template-columns:repeat(2,1fr);}}
+.unit{border:2px solid var(--line);border-radius:10px;padding:20px 18px;background:var(--white);display:flex;flex-direction:column;gap:8px;position:relative;}
+.unit.live{border-color:var(--rust);background:var(--warm-bg,#FFFAF6);}
+.unit .u{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);}
+.unit.live .u{color:var(--rust);}
+.unit .pct{font-family:"Big Shoulders Display",sans-serif;font-size:clamp(34px,3.4vw,48px);font-weight:700;line-height:1;color:var(--ink);}
+.unit.live .pct{color:var(--rust);}
+.unit .when{font-size:13.5px;color:var(--muted);}
+.unit .boxes{display:flex;gap:6px;margin-top:4px;}
+.unit .boxes i{display:block;width:20px;height:28px;border-radius:3px;}
+.unit .boxes i.c{background:var(--blue);} .unit .boxes i.k{background:var(--rust);}
+.unit:not(.live) .boxes i{opacity:.4;}
+
+/* industries */
+.inds{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));margin-top:clamp(36px,4vw,56px);}
+.ind{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:24px 22px;display:flex;flex-direction:column;gap:9px;}
+.ind.entry{border:2px solid var(--rust);}
+.ind h3{font-size:25px;}
+.ind .k{font-size:15.5px;font-weight:600;color:var(--ink);}
+.ind p{font-size:14.8px;color:var(--muted);}
+.ind .tag{align-self:flex-start;margin-top:auto;padding:4px 14px;border-radius:99px;font-size:12.5px;font-weight:600;background:#E6EAE8;color:var(--ink);}
+.ind.entry .tag{background:var(--rust);color:#fff;}
+
+/* evidence rows */
+.ev{margin-top:clamp(34px,4vw,52px);display:flex;flex-direction:column;}
+.ev .row{display:grid;grid-template-columns:168px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+.s-ink .ev .row{border-color:#2C3D4B;}
+.ev .w{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);}
+.ev p{font-size:15.5px;color:var(--muted);}
+.s-ink .ev p{color:#A8BCC7;}
+@media (max-width:640px){.ev .row{grid-template-columns:1fr;gap:5px;}}
+
+/* band */
+.band{position:relative;height:clamp(260px,38vw,480px);overflow:hidden;background:var(--ink);}
+.band video,.band img{width:100%;height:100%;object-fit:cover;}
+.band .ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,32,43,.9) 0%,rgba(21,32,43,.6) 46%,rgba(21,32,43,.1) 100%);}
+.band .txt{position:absolute;inset:0;display:flex;align-items:center;}
+.band .txt .wrap{width:100%;}
+.band h2{color:#fff;max-width:19ch;}
+.band p{color:#BBD3DA;margin-top:12px;max-width:48ch;font-size:16.5px;}
+
+/* team */
+.team{display:grid;gap:clamp(22px,3vw,34px);grid-template-columns:repeat(auto-fit,minmax(214px,1fr));margin-top:clamp(36px,4vw,56px);}
+.mem .ph{aspect-ratio:1/1;border-radius:8px;}
+.mem .ph img{height:100%;object-fit:cover;}
+.mem .initials{width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--sky);color:var(--blue-dp);font-family:"Big Shoulders Display",sans-serif;font-size:56px;font-weight:700;border-radius:8px;}
+.mem h3{margin-top:14px;font-size:22px;}
+.mem .role{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-top:5px;}
+.mem p{margin-top:9px;font-size:14.5px;color:var(--muted);}
+.mem a{color:var(--blue-dp);font-size:14px;margin-top:7px;display:inline-block;}
+
+/* contact */
+.contact{background:var(--ink);color:#fff;}
+.contact .wrap{display:grid;gap:32px;grid-template-columns:minmax(0,1fr) auto;align-items:end;}
+.contact h2{color:#fff;max-width:17ch;}
+.contact p{margin-top:16px;color:#A8BCC7;max-width:52ch;font-size:var(--fs-lead);}
+.mails{display:flex;flex-direction:column;gap:11px;}
+.mails a{font-size:15.5px;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:4px;}
+.mails a:hover{border-color:#fff;}
+@media (max-width:820px){.contact .wrap{grid-template-columns:1fr;align-items:start;}}
+
+footer{background:var(--ink);color:#75878F;padding:30px 0 40px;font-size:13.5px;border-top:1px solid #2C3D4B;}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;}
+footer a{color:#A8BCC7;}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
+
+
+/* how it works */
+.steps{list-style:none;margin:clamp(34px,4vw,52px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);}
+.steps li{border-right:1px solid var(--line);} .steps li:last-child{border-right:none;}
+.steps a{display:flex;flex-direction:column;gap:4px;padding:22px 24px 22px 0;text-decoration:none;color:var(--ink);position:relative;}
+.steps li+li a{padding-left:24px;}
+.steps a::before{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--rust);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);}
+.steps a:hover::before{transform:scaleX(1);}
+.steps .sn,.stephead .sn,.flow .fn{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--heat);}
+.steps b{font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:22px;margin-top:6px;}
+.steps em{font-style:normal;font-size:14.5px;color:var(--muted);}
+@media (max-width:720px){.steps{grid-template-columns:1fr;}.steps li{border-right:none;border-bottom:1px solid var(--line);}.steps li+li a{padding-left:0;}}
+.step{padding-top:clamp(56px,7vw,96px);scroll-margin-top:110px;}
+.how#how-2 .step:first-child{padding-top:0;}
+.stephead{max-width:760px;}
+.stephead h3{font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:clamp(26px,2.8vw,38px);line-height:1.1;margin-top:12px;color:var(--ink);}
+.stephead p{margin-top:14px;font-size:var(--fs-lead);line-height:1.55;color:var(--muted);}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(28px,3.5vw,44px);counter-reset:f;}
+.flow > div{padding:0 26px 0 0;margin-right:26px;border-right:1px solid var(--line);position:relative;}
+.flow > div:last-child{border-right:none;margin-right:0;}
+.flow b{display:block;font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:20px;margin-top:8px;color:var(--ink);}
+.flow p{margin-top:8px;font-size:15.5px;color:var(--muted);}
+@media (max-width:820px){.flow{grid-template-columns:1fr;gap:22px;}.flow > div{border-right:none;margin-right:0;padding:0;}}
+.fine{margin-top:26px;font-size:13.5px;color:var(--faint);max-width:80ch;}
+#how,#how-loop,#how-build,#industries,#why,#team{scroll-margin-top:100px;}
+
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(36px,4vw,56px);}
+.split.intro{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;margin-top:0;}
+.split.intro .photopair .ph{aspect-ratio:4/5;}
+.vp{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:28px 30px 30px;display:flex;flex-direction:column;transition:border-color .25s,transform .25s var(--ease);}
+.vp:hover{border-color:var(--rust);transform:translateY(-2px);}
+.vp .vn{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--heat);}
+.vp h4{margin:12px 0 0;font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:24px;line-height:1.15;color:var(--ink);}
+.vp p{margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--muted);}
+@media (max-width:640px){.vgrid{grid-template-columns:1fr;}}
+
+/* why now */
+.whytop{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr);gap:0;margin-top:clamp(36px,4vw,56px);border-top:1px solid #2C3D4B;border-bottom:1px solid #2C3D4B;}
+.whytop > div{padding:30px 32px;border-left:1px solid #2C3D4B;}
+.whytop > div:first-child{border-left:none;padding-left:0;}
+.whytop p{margin-top:12px;color:#C3D2DA;font-size:16.5px;line-height:1.55;max-width:46ch;}
+.wk,.pc .rg{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--heat-lt);}
+.wstat b{display:block;font-family:"Archivo Narrow",sans-serif;font-weight:500;font-size:clamp(40px,4vw,56px);line-height:1;color:#fff;}
+.wstat span{display:block;margin-top:10px;font-size:14.5px;color:#A8BCC7;max-width:22ch;}
+.wsub{margin-top:clamp(44px,5vw,64px);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#7F95A3;}
+.policy{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:16px;}
+.pc{background:var(--ink-2);border:1px solid #2C3D4B;border-radius:12px;padding:24px 22px 26px;}
+.pc .rg{display:inline-block;padding:4px 9px;border:1px solid rgba(255,148,97,.45);border-radius:6px;}
+.pc h4{margin:16px 0 0;font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:21px;line-height:1.15;color:#fff;}
+.pc p{margin-top:10px;font-size:14.5px;line-height:1.55;color:#A8BCC7;}
+.dc{margin-top:14px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(26px,3vw,40px);border-radius:12px;background:linear-gradient(120deg,#0F2B2C 0%,#12343A 60%,#173F48 100%);border:1px solid rgba(95,194,196,.35);}
+.dc h3{margin-top:12px;font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:clamp(24px,2.4vw,32px);line-height:1.12;color:#fff;}
+.dc p{font-size:16px;line-height:1.6;color:#C3D2DA;}
+@media (max-width:1000px){.policy{grid-template-columns:1fr 1fr;}.whytop{grid-template-columns:1fr 1fr;}.whytop > div:first-child{grid-column:1/-1;border-bottom:1px solid #2C3D4B;padding-right:0;}.whytop > div:nth-child(2){border-left:none;padding-left:0;}.dc{grid-template-columns:1fr;}}
+@media (max-width:600px){.policy{grid-template-columns:1fr;}}
+
+/* contact modal */
+.cmodal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:16px;}
+.cmodal[hidden]{display:none;}
+.cm-back{position:absolute;inset:0;background:rgba(8,14,19,.55);backdrop-filter:blur(4px);opacity:0;transition:opacity .22s;}
+.cm-box{position:relative;width:100%;max-width:520px;max-height:calc(100vh - 32px);overflow:auto;background:#fff;border-radius:18px;padding:34px 34px 30px;box-shadow:0 30px 80px rgba(8,14,19,.35);transform:translateY(14px) scale(.98);opacity:0;transition:transform .25s var(--ease),opacity .22s;}
+.cmodal.on .cm-back{opacity:1;} .cmodal.on .cm-box{transform:none;opacity:1;}
+.cm-x{position:absolute;top:14px;right:14px;width:38px;height:38px;border:0;border-radius:10px;background:var(--stone);font-size:24px;line-height:1;color:var(--ink);cursor:pointer;}
+.cm-x:hover{background:var(--line-2);}
+.cm-k{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--heat);}
+.cm-box h3{margin-top:10px;font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:30px;line-height:1.1;color:var(--ink);}
+.cm-sub{margin-top:8px;font-size:15px;color:var(--muted);}
+#cmForm label{display:block;margin-top:16px;font-size:13.5px;font-weight:600;color:var(--ink);}
+#cmForm input,#cmForm textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:15.5px;font-weight:400;color:var(--ink);background:var(--cream);border:1px solid var(--line);border-radius:10px;outline:none;transition:border-color .2s,box-shadow .2s;resize:vertical;}
+#cmForm input:focus,#cmForm textarea:focus{border-color:var(--rust);box-shadow:0 0 0 3px rgba(20,135,140,.15);background:#fff;}
+.cm-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;}
+.cm-err{margin-top:14px;font-size:14px;color:#A33A13;}
+.cm-send{margin-top:22px;width:100%;border:0;cursor:pointer;font-size:16px;}
+.cm-send:disabled{opacity:.7;cursor:wait;}
+.cm-done .btn{margin-top:22px;border:0;cursor:pointer;}
+@media (max-width:520px){.cm-box{padding:28px 20px 22px;}}
+
+.cm-toast{position:fixed;left:50%;bottom:28px;z-index:120;display:flex;align-items:center;gap:12px;padding:16px 22px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:14px;font-size:15.5px;font-weight:500;box-shadow:0 18px 50px rgba(8,14,19,.35);transform:translate(-50%,20px);opacity:0;transition:transform .3s var(--ease),opacity .3s;max-width:calc(100vw - 32px);}
+.cm-toast.on{transform:translate(-50%,0);opacity:1;}
+.cm-toast i{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--rust);font-size:14px;}
+.cm-err a{color:inherit;text-decoration:underline;}
+</style>
+
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Lotus Matter home"><img src="assets/logo-lockup-blue.svg" alt="Lotus Matter"></a>
+    <ul>
+      <li class="hide-sm"><a href="#how">How it works</a></li>
+      <li class="hide-sm"><a href="#industries">Industries</a></li>
+      <li class="hide-sm"><a href="#why">Why now</a></li>
+      <li class="hide-sm"><a href="#team">Team</a></li>
+    </ul>
+    <a class="navcta" href="#contact-form" data-contact><span>Get in touch</span><i aria-hidden="true">→</i></a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <video class="clip on" data-cap="Limestone|the raw material · Malham Cove, Yorkshire" muted playsinline preload="auto" poster="assets/hero/h1-limestone.jpg" src="assets/hero/h1-limestone.mp4"></video>
+  <video class="clip" data-cap="Heavy industry|where the emissions are" style="object-position:center 30%" muted playsinline preload="none" poster="assets/hero/h2-industry.jpg" data-src="assets/hero/h2-industry.mp4"></video>
+  <video class="clip" data-cap="650–920 °C|where our particle works" muted playsinline preload="none" poster="assets/hero/h3-heat.jpg" data-src="assets/hero/h3-heat.mp4"></video>
+  <video class="clip" data-cap="Biomass|every tonne captured is a removal" muted playsinline preload="none" poster="assets/hero/h4-biomass.jpg" data-src="assets/hero/h4-biomass.mp4"></video>
+  <div class="scrim"></div>
+  <div class="scrim2"></div>
+  <div class="wrap">
+    <div class="inner">
+      <p class="label">Lotus Matter · engineered sorbents · modular capture system</p>
+      <h1><span>Cement. Lime. Biomass.</span><span class="one">One particle.</span></h1>
+      <p class="sub">A durable carbon capture particle, and the capture system built around it, for every industry that runs hot.</p>
+      <div class="ctas">
+        <a class="btn btn--p" href="#contact-form" data-contact>Talk to us</a>
+        <a class="btn btn--g" href="#how">See how it works</a>
+      </div>
+    </div>
+    <div class="beat" aria-live="off">
+      <div class="cap" id="heroCap"><b>Limestone</b>the raw material · Malham Cove, Yorkshire</div>
+      <div class="bars"><span><i></i></span><span><i></i></span><span><i></i></span><span><i></i></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="statstrip">
+  <div class="wrap">
+    <div><span class="k">Capture</span><b>~90<small>%</small></b><p>of a plant's CO₂ captured, built up one smaller capture unit at a time.</p></div>
+    <div><span class="k">Sorbent use</span><b class="hot">~93<small>% less</small></b><p>sorbent consumed than conventional limestone-based capture.</p></div>
+    <div><span class="k">Where we are</span><b>TRL 4–5</b><p>Patent filed and wholly owned. Innovate UK funded.</p></div>
+  </div>
+</div>
+
+<div class="supp">
+  <div class="wrap">
+    <p class="l">Partners and supporters</p>
+    <div class="logos">
+      <img src="assets/logo-1.png" alt="UK Research and Innovation" class="l1">
+      <img src="assets/logo-2.png" alt="Cranfield University" class="l2">
+      <img src="assets/logo-3.png" alt="Loughborough University" class="l3">
+      <img src="assets/logo-4.png" alt="Carbon13" class="l4">
+      <img src="assets/logo-5.png" alt="Oxfordshire Greentech" class="l5">
+      <img src="assets/logo-6.png" alt="Seed Enterprise Investment Scheme" class="l6">
+      <img src="assets/logo-7.png" alt="Enterprise Investment Scheme" class="l7">
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="s-white how" id="how">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">How it works</p>
+      <h2>One particle. One loop. One unit at a time.</h2>
+      <p class="lead">Most capture technology asks a plant to cool its gas, bolt on a chemical plant the size of the kiln and commit to it all at once. We start from the material instead, and design everything else around how it behaves.</p>
+    </div>
+    <ol class="steps rv">
+      <li><a href="#how-particle"><span class="sn">01</span><b>The particle</b><em>What we make</em></a></li>
+      <li><a href="#how-loop"><span class="sn">02</span><b>The loop</b><em>How it captures</em></a></li>
+      <li><a href="#how-build"><span class="sn">03</span><b>The build-out</b><em>How a plant adopts it</em></a></li>
+    </ol>
+
+    <div class="step" id="how-particle">
+      <div class="split intro rv">
+        <div class="stephead">
+        <span class="sn">01 / 03 · The particle</span>
+        <h3>Carbon capture already works. The material is what fails.</h3>
+        <p>Calcium-based capture is the best-suited chemistry for hot industrial gas, and it has never gone commercial because the limestone it runs on sinters shut and has to be replaced continuously. We engineer a composite particle that holds its structure instead, and supply it as a consumable.</p>
+      </div>
+        <div>
+          <div class="photopair">
+            <figure><div class="ph"><img src="assets/particles-pile.jpg" alt="Lotus Matter engineered particles" loading="lazy"></div></figure>
+            <figure><div class="ph"><img src="assets/particles-vial.jpg" alt="Lotus Matter sample particles in a vial" loading="lazy"></div></figure>
+          </div>
+          <figcaption>Sample particles. Patent filed and wholly owned.</figcaption>
+        </div>
+      </div>
+      <div class="vgrid rv">
+          <div class="vp"><span class="vn">01 · Lasts longer</span><h4>More capture from less material</h4>
+            <p>Built to resist the sintering and wear that make limestone crumble, so each particle keeps capturing for longer. In cycling tests to date it retains 15–20% more capture capacity. That means less sorbent bought, less purged and a lower cost per tonne captured.</p></div>
+          <div class="vp"><span class="vn">02 · Reusable</span><h4>A second life after capture</h4>
+            <p>Spent particles are not a waste stream. Their chemistry is designed to go back into the host process as raw feed. In a cement plant they go straight into the kiln, so the sorbent itself is part of a closed loop.</p></div>
+          <div class="vp"><span class="vn">03 · Built-in MRV</span><h4>Verification designed into the particle</h4>
+            <p>An optical tag engineered into every batch lets capture performance be read from the material itself. Our monitoring software, now in development, turns those readings into continuous, auditable capture data instead of periodic sampling.</p></div>
+          <div class="vp"><span class="vn">04 · Heat as well as capture</span><h4>Captures carbon, stores heat</h4>
+            <p>Regenerated particles leave the calciner hot. Held in a store, they can release high-grade heat when the plant needs it, a second output alongside capture. A design feature of the system, not yet a tested claim.</p></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<div class="band">
+  <video autoplay muted loop playsinline poster="assets/kiln.jpg" aria-hidden="true">
+    <source src="assets/kiln-loop.mp4" type="video/mp4">
+  </video>
+  <div class="ov"></div>
+  <div class="txt"><div class="wrap">
+    <h2>Capture belongs where the heat already is</h2>
+    <p>Our particle works at the temperature an industrial process already runs at, instead of asking the plant to cool its flue gas and pay for the privilege twice.</p>
+  </div></div>
+</div>
+
+<section class="s-stone how" id="how-2">
+  <div class="wrap">
+    <div class="step" id="how-loop">
+      <div class="stephead rv">
+        <span class="sn">02 / 03 · The loop</span>
+        <h3>Capture at the temperature the plant already runs at.</h3>
+        <p>Our particles circulate between two hot vessels beside the plant. The kiln line itself is never touched.</p>
+      </div>
+      <div class="flow rv">
+        <div><span class="fn">Capture</span><b>Carbonator · ~650 °C</b><p>Flue gas meets the particles. CO₂ binds to them and the gas leaves clean, while the reaction gives off heat.</p></div>
+        <div><span class="fn">Release</span><b>Calciner · ~920 °C</b><p>The loaded particles are heated, let go of a pure CO₂ stream ready for storage or use, and come out regenerated.</p></div>
+        <div><span class="fn">Return</span><b>Back to work</b><p>Regenerated particles go round again carrying useful heat. Worn ones are purged into the kiln as raw feed, so nothing is wasted.</p></div>
+      </div>
+      <div class="dwrap rv">
+<svg class="dia" viewBox="0 0 1086 412" role="img" aria-labelledby="lT lD">
+  <title id="lT">The Lotus Matter capture loop</title>
+  <desc id="lD">Flue gas at about 200 degrees enters a carbonator at 650 degrees, where Lotus particles capture CO2 and clean gas returns to the stack. Loaded particles pass to a calciner at about 920 degrees, which releases pure CO2 for storage and regenerates the particles. Hot regenerated particles pass through a heat store that releases heat on demand before returning to the carbonator. Fresh particles enter at the calciner and worn particles are purged to the kiln as raw feed.</desc>
+  <defs>
+    <marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#15202b"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3290b5"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--heat)"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9AA3A8"/></marker>
+  </defs>
+  <style>
+    .lb{font-family:Inter,Arial,sans-serif;font-size:14px;fill:#4E5A63}
+    .lbb{font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:600;fill:#15202b}
+    .ttl{font-family:"Archivo Narrow",Arial,sans-serif;font-size:25px;font-weight:600}
+    .tmp{font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:600}
+    .sm{font-family:Inter,Arial,sans-serif;font-size:13px;fill:#15202b}
+  </style>
+
+  <text x="0" y="176" class="lbb">Flue gas in</text>
+  <text x="0" y="196" class="lb">~200 °C</text>
+  <line x1="0" y1="212" x2="168" y2="212" stroke="#15202b" stroke-width="2.5" marker-end="url(#ad)"/>
+
+  <line x1="282" y1="104" x2="282" y2="52" stroke="#15202b" stroke-width="2.5" marker-end="url(#ad)"/>
+  <text x="296" y="66" class="lb">Clean gas to stack</text>
+
+  <rect x="172" y="106" width="220" height="186" rx="12" fill="#DCEBF1" stroke="#3290b5" stroke-width="2.5"/>
+  <text x="282" y="152" class="ttl" fill="#1F6B8C" text-anchor="middle">Carbonator</text>
+  <text x="282" y="176" class="tmp" fill="#3290b5" text-anchor="middle">650 °C</text>
+  <g fill="#3290b5" stroke="#fff" stroke-width="1.6">
+    <circle cx="238" cy="204" r="7"/><circle cx="260" cy="204" r="7"/><circle cx="282" cy="204" r="7"/><circle cx="304" cy="204" r="7"/><circle cx="326" cy="204" r="7"/>
+  </g>
+  <text x="282" y="244" class="sm" text-anchor="middle">captures CO₂</text>
+  <text x="282" y="266" class="sm" text-anchor="middle">+ releases heat</text>
+
+  <line x1="396" y1="150" x2="600" y2="150" stroke="#3290b5" stroke-width="3" marker-end="url(#ab)"/>
+  <g fill="#3290b5" stroke="#fff" stroke-width="1.6">
+    <circle cx="418" cy="150" r="6"/><circle cx="446" cy="150" r="6"/><circle cx="474" cy="150" r="6"/><circle cx="502" cy="150" r="6"/><circle cx="530" cy="150" r="6"/><circle cx="558" cy="150" r="6"/>
+  </g>
+  <text x="494" y="134" class="lb" text-anchor="middle">particles + CO₂</text>
+
+  <line x1="660" y1="50" x2="660" y2="100" stroke="#3290b5" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="674" y="66" class="tmp" fill="#1F6B8C">Fresh Lotus particles</text>
+
+  <rect x="604" y="106" width="220" height="186" rx="12" style="fill:var(--heat-bg);stroke:var(--heat)" stroke-width="2.5"/>
+  <text x="714" y="152" class="ttl" style="fill:var(--heat)" text-anchor="middle">Calciner</text>
+  <text x="714" y="176" class="tmp" style="fill:var(--heat)" text-anchor="middle">~920 °C</text>
+  <g style="fill:var(--heat)" stroke="#fff" stroke-width="1.6">
+    <circle cx="670" cy="204" r="7"/><circle cx="692" cy="204" r="7"/><circle cx="714" cy="204" r="7"/><circle cx="736" cy="204" r="7"/><circle cx="758" cy="204" r="7"/>
+  </g>
+  <text x="714" y="244" class="sm" text-anchor="middle">releases CO₂</text>
+  <text x="714" y="266" class="sm" text-anchor="middle">+ regenerates</text>
+
+  <line x1="828" y1="150" x2="892" y2="150" stroke="#15202b" stroke-width="2.5" marker-end="url(#ad)"/>
+  <text x="900" y="144" class="lbb">Pure CO₂</text>
+  <text x="900" y="164" class="lb">to storage or use</text>
+
+  <line x1="896" y1="240" x2="832" y2="240" style="stroke:var(--heat)" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="900" y="234" class="tmp" style="fill:var(--heat)">Oxy-fired</text>
+  <text x="900" y="254" class="tmp" style="fill:var(--heat)">or electric</text>
+
+  <polyline points="680,294 680,352 640,352" fill="none" style="stroke:var(--heat)" stroke-width="3" marker-end="url(#ar)"/>
+  <g style="fill:var(--heat)" stroke="#fff" stroke-width="1.6"><circle cx="680" cy="312" r="6"/><circle cx="680" cy="334" r="6"/></g>
+  <text x="694" y="330" class="lb" style="fill:var(--heat)">hot particles</text>
+
+  <rect x="372" y="322" width="262" height="62" rx="10" style="fill:var(--heat)"/>
+  <text x="503" y="348" class="ttl" fill="#ffffff" text-anchor="middle">Heat store</text>
+  <text x="503" y="370" class="sm" style="fill:#ffffff" text-anchor="middle">high-grade heat on demand</text>
+
+  <polyline points="368,352 330,352 330,296" fill="none" style="stroke:var(--heat)" stroke-width="3" marker-end="url(#ar)"/>
+  <g style="fill:var(--heat)" stroke="#fff" stroke-width="1.6"><circle cx="330" cy="334" r="6"/><circle cx="330" cy="312" r="6"/></g>
+
+  <polyline points="790,294 858,294 858,340" fill="none" stroke="#9AA3A8" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="800" y="366" class="lbb">Purge</text>
+  <text x="800" y="386" class="lb">to kiln as feed</text>
+
+  <text x="0" y="330" class="lbb">MRV built in</text>
+  <text x="0" y="350" class="lb">optical tags in</text>
+  <text x="0" y="368" class="lb">every particle</text>
+  <text x="0" y="386" class="lb">verify capture</text>
+</svg>
+
+      </div>
+    </div>
+
+    <div class="step" id="how-build">
+      <div class="stephead rv">
+        <span class="sn">03 / 03 · The build-out</span>
+        <h3>Start with one unit. Add more as the carbon bill rises.</h3>
+        <p>Instead of one enormous capture plant, the system is assembled from standard factory-built units on a shared spine. The first decision is a fraction of the size, each unit earns before the next is bought, and a plant adds capacity as free allowances phase out.</p>
+      </div>
+      <div class="units rv">
+      <div class="unit live"><span class="u">Unit 1</span><div class="boxes"><i class="c"></i><i class="k"></i></div><span class="pct">~22%</span><span class="when">of plant CO₂ · year 1</span></div>
+      <div class="unit"><span class="u">Unit 2</span><div class="boxes"><i class="c"></i><i class="k"></i></div><span class="pct">~45%</span><span class="when">by year 2</span></div>
+      <div class="unit"><span class="u">Unit 3</span><div class="boxes"><i class="c"></i><i class="k"></i></div><span class="pct">~67%</span><span class="when">by year 3</span></div>
+      <div class="unit"><span class="u">Unit 4</span><div class="boxes"><i class="c"></i><i class="k"></i></div><span class="pct">~90%</span><span class="when">by year 4</span></div>
+    </div>
+      <div class="tiles rv">
+      <div class="tile tile--txt"><b>Smaller first cheque</b><p>A plant and a grant can carry unit one, instead of committing to a full-scale build before anything is proven.</p></div>
+      <div class="tile tile--txt"><b>Number up, not scale up</b><p>Repeating a shop-built unit sidesteps scaling two coupled reactors to full cement size in a single leap.</p></div>
+      <div class="tile tile--txt"><b>Pilots become unit one</b><p>The commercial pilots are built as the first unit and stay with the host as a working asset.</p></div>
+      <div class="tile tile--txt hot"><b>Only with our particle</b><p>Compact, fast reactors need a particle that survives them. Natural limestone breaks down too quickly to run this way.</p></div>
+    </div>
+      <p class="fine rv">Figures are from our own system model for a one-million-tonne clinker plant. Detailed economics are shared with partners and investors under NDA.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · INDUSTRIES -->
+<section class="s-white" id="industries">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Where we fit</p>
+      <h2>Hot gas rich in CO₂, across industries. First plants: cement and biomass.</h2>
+      <p class="lead">The particle is reactor-agnostic and sector-agnostic. The chemistry does not care what burns upstream. We are proving it where the pull is strongest, and labelling honestly how far along each one is.</p>
+    </div>
+    <div class="inds rv">
+      <div class="ind entry"><h3>Cement</h3><p class="k">Kiln gas, 15–25% CO₂.</p>
+        <p>Capture units bolt on at the end of the line, the kiln is untouched, and worn particles return as kiln feed.</p><span class="tag">Entry market</span></div>
+      <div class="ind entry"><h3>Biomass power</h3><p class="k">Every tonne is a removal.</p>
+        <p>No kiln to absorb worn sorbent, so durability pays most here, and the existing steam turbine takes the recovered heat.</p><span class="tag">Entry market</span></div>
+      <div class="ind"><h3>Direct air capture</h3><p class="k">Calcium-based DAC plants.</p>
+        <p>Several DAC developers run on calcium sorbents that wear out. We sell them particles; they keep their plant.</p><span class="tag">Sorbent sale</span></div>
+      <div class="ind"><h3>Energy from waste</h3><p class="k">About half biogenic CO₂.</p>
+        <p>Enters the UK emissions trading scheme from 2028. Needs chlorine tolerance, which is still to test.</p><span class="tag">Next</span></div>
+      <div class="ind"><h3>Steel</h3><p class="k">Blast-furnace gas, 20–27% CO₂.</p>
+        <p>Rich, hot, dusty gas suits the chemistry, and worn particles can replace flux lime.</p><span class="tag">Next</span></div>
+      <div class="ind"><h3>Lime and pulp</h3><p class="k">Lime kilns, kraft mills.</p>
+        <p>A good fit for kilns that do not want an oxyfuel rebuild, at smaller or more remote sites.</p><span class="tag">Later</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · WHY NOW -->
+<section class="s-ink" id="why">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Why now</p>
+      <h2>A price on carbon, and buyers for the clean alternative.</h2>
+      <p class="lead">Heavy industry's emissions can't be designed away. Across our four markets, policy now puts a cost on them, and a new kind of buyer is paying for the alternative.</p>
+    </div>
+
+    <div class="whytop rv">
+      <div>
+        <span class="wk">Unavoidable by chemistry</span>
+        <p>Around two-thirds of a cement plant's emissions come from the reaction itself. Switch every kiln to renewable power and most of them remain. Capture is the only way to deal with them.</p>
+      </div>
+      <div class="wstat"><b>~7–8%</b><span>of global CO₂ comes from cement alone</span></div>
+      <div class="wstat"><b>~⅔</b><span>of that is chemistry, not fuel</span></div>
+    </div>
+
+    <p class="wsub rv">Policy levers in our markets</p>
+    <div class="policy rv">
+      <div class="pc"><span class="rg">EU</span><h4>Carbon priced at the border</h4><p>Free emissions allowances for heavy industry are being withdrawn, and since 2026 importers pay for the carbon in cement and steel through CBAM. A proposal to bring permanent removals into the ETS is now under negotiation.</p></div>
+      <div class="pc"><span class="rg">UK</span><h4>A wider carbon market</h4><p>A UK carbon border adjustment covering cement starts in January 2027, the UK ETS extends to energy-from-waste in 2028, and long-term government funding is backing industrial CCUS clusters.</p></div>
+      <div class="pc"><span class="rg">US</span><h4>Capture paid per tonne</h4><p>The 45Q tax credit, retained and strengthened in 2025, pays up to $85 for each tonne captured at an industrial site and stored, and now the same for CO₂ that is put to use.</p></div>
+      <div class="pc"><span class="rg">India</span><h4>A compliance market for industry</h4><p>India's Carbon Credit Trading Scheme sets binding emission-intensity targets for cement and other heavy sectors from 2025–26. Plants that beat their target earn credits to sell; those that miss must buy them.</p></div>
+    </div>
+
+    <div class="dc rv">
+      <div>
+        <span class="wk">New demand · Data centres</span>
+        <h3>AI is building fast, and its builders are buying clean materials and carbon removal.</h3>
+      </div>
+      <p>Hyperscalers' emissions are rising with the AI build-out, and much of their footprint sits in the concrete and steel of new data centres. They have become some of the largest buyers of low-carbon cement and of durable carbon removal. These are the two markets our particle serves: cleaner cement through capture at the kiln, and permanent removals from biomass plants.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 6 · TEAM -->
+<section class="s-white" id="team">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">Team</p>
+      <h2>Two founders and the labs behind them.</h2>
+      <p class="lead">A materials company needs a materials scientist and someone who can get the material into a plant. That is the whole thesis of how we are staffed.</p>
+    </div>
+    <div class="team rv">
+      <div class="mem"><div class="ph"><img src="assets/prerna.jpg" alt="Prerna Jain" loading="lazy"></div>
+        <h3>Prerna Jain</h3><p class="role">CEO &amp; Co-founder</p>
+        <p>Ten years consulting at Deloitte across India, the US and the UK, and three years in climate tech. Has founded two early-stage companies, including one with an exit.</p>
+        <a href="https://www.linkedin.com/in/prerjain/">LinkedIn ↗</a></div>
+      <div class="mem"><div class="ph"><img src="assets/ekanem.jpg" alt="Ekanem Ekanem" loading="lazy"></div>
+        <h3>Ekanem Ekanem</h3><p class="role">CTO &amp; Co-founder</p>
+        <p>PhD in Chemical Engineering from the University of Bath, with a background developing engineered microparticles at commercial scale. Leads formulation and process development.</p>
+        <a href="https://www.linkedin.com/in/ekanem-ekanem-605b7133/">LinkedIn ↗</a></div>
+      <div class="mem"><div class="ph"><img src="assets/ali.jpg" alt="Prof. Ali Nabavi" loading="lazy"></div>
+        <h3>Prof. Ali Nabavi</h3><p class="role">Academic Advisor · Cranfield</p>
+        <p>Carbon capture researcher at Cranfield University, home of the UK's calcium looping pilot facility, and closely involved in validating the technology.</p>
+        <a href="https://www.linkedin.com/in/salinabavi/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+      <div class="mem"><div class="ph"><img src="assets/goran.jpg" alt="Prof. Goran Vladisavljevic" loading="lazy"></div>
+        <h3>Prof. Goran Vladisavljevic</h3><p class="role">Academic Advisor · Loughborough</p>
+        <p>Particle engineering and microparticle manufacturing at Loughborough University, working with us on manufacturing method development.</p>
+        <a href="https://www.linkedin.com/in/dr-goran-vladisavljevic-2b226052/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:var(--heat-lt);">Get in touch</p>
+      <h2 style="margin-top:14px;">Help us capture the emissions no one can design away.</h2>
+      <p>Cement plants in the UK, Europe and the US alone release around 200 million tonnes of CO₂ a year. If you run a cement, lime, biomass or waste-to-energy plant, build capture systems, invest in industrial decarbonisation, or need a calcium sorbent that lasts, we would like to hear from you.</p>
+      <p style="margin-top:26px;"><a class="btn btn--p" href="#contact-form" data-contact>Get in touch</a></p>
+    </div>
+    <div class="mails">
+      <a href="mailto:prerna@lotusmatter.com">prerna@lotusmatter.com</a>
+      <a href="mailto:ekanem@lotusmatter.com">ekanem@lotusmatter.com</a>
+    </div>
+  </div>
+</section>
+
+<div class="cmodal" id="contact-form" role="dialog" aria-modal="true" aria-labelledby="cmTitle" hidden>
+  <div class="cm-back" data-close></div>
+  <div class="cm-box">
+    <button class="cm-x" type="button" aria-label="Close" data-close>×</button>
+    <form id="cmForm" novalidate>
+      <p class="cm-k">Get in touch</p>
+      <h3 id="cmTitle">Talk to Lotus Matter</h3>
+      <p class="cm-sub">Tell us a little about you and we will reply within two working days.</p>
+      <label>Name<input name="name" type="text" autocomplete="name" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Location<input name="location" type="text" autocomplete="country-name" placeholder="City, country"></label>
+      <label>Comments<textarea name="message" rows="4" required placeholder="What would you like to talk about?"></textarea></label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="cm-hp" aria-hidden="true">
+      <p class="cm-err" role="alert" hidden></p>
+      <button class="btn btn--p cm-send" type="submit">Send message</button>
+    </form>
+    <div class="cm-done" hidden>
+      <p class="cm-k">Message sent</p>
+      <h3>Thank you.</h3>
+      <p class="cm-sub">We have your note and will be in touch soon.</p>
+      <button class="btn btn--p" type="button" data-close>Close</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var TO='prerna@lotusmatter.com';
+  var ENDPOINT='https://formsubmit.co/ajax/'+TO;
+  var m=document.getElementById('contact-form'); if(!m) return;
+  var f=document.getElementById('cmForm'), done=m.querySelector('.cm-done'), err=m.querySelector('.cm-err'), send=m.querySelector('.cm-send'), last=null;
+  function open(e){ if(e) e.preventDefault(); last=document.activeElement; m.hidden=false; f.hidden=false; done.hidden=true; err.hidden=true; document.documentElement.style.overflow='hidden'; setTimeout(function(){ m.classList.add('on'); f.elements.name.focus(); },10); }
+  function close(){ m.classList.remove('on'); document.documentElement.style.overflow=''; setTimeout(function(){ m.hidden=true; },220); if(last) last.focus(); }
+  document.querySelectorAll('[data-contact]').forEach(function(a){ a.addEventListener('click',open); });
+  m.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click',close); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!m.hidden) close(); });
+  if(location.hash==='#contact-form') open();
+  function mailtoFallback(d){
+    var body='Name: '+d.name+'\nEmail: '+d.email+'\nLocation: '+(d.location||'-')+'\n\n'+d.message;
+    location.href='mailto:'+TO+'?subject='+encodeURIComponent('Website enquiry from '+d.name)+'&body='+encodeURIComponent(body);
+  }
+  function toast(t){ var el=document.createElement('div'); el.className='cm-toast'; el.setAttribute('role','status'); el.innerHTML='<i aria-hidden="true">✓</i>'+t; document.body.appendChild(el);
+    requestAnimationFrame(function(){ el.classList.add('on'); }); setTimeout(function(){ el.classList.remove('on'); setTimeout(function(){ el.remove(); },350); },4200); }
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); err.hidden=true;
+    var d={name:f.elements.name.value.trim(),email:f.elements.email.value.trim(),location:f.elements.location.value.trim(),message:f.elements.message.value.trim()};
+    if(f.elements._honey.value) return;
+    if(!d.name||!d.message||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)){ err.textContent='Please add your name, a valid email and a short message.'; err.hidden=false; return; }
+    send.disabled=true; send.textContent='Sending…';
+    var payload={name:d.name,email:d.email,location:d.location||'-',message:d.message,_subject:'Website enquiry from '+d.name,_replyto:d.email,_template:'table'};
+    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){ return r.json().then(function(j){ if(!r.ok||String(j.success)!=='true') throw new Error(j.message||'failed'); }); })
+      .then(function(){ f.reset(); close(); toast('Thanks, we will shortly be in touch.'); })
+      .catch(function(){ err.innerHTML='Sorry, that did not go through. Please try again, or email us at <a href="mailto:'+TO+'">'+TO+'</a>.'; err.hidden=false; })
+      .then(function(){ send.disabled=false; send.textContent='Send message'; });
+  });
+})();
+</script>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Lotus Matter Limited · Registered in England &amp; Wales · 16239366</span>
+    <span><a href="https://www.linkedin.com/company/lotus-matter" target="_blank" rel="noopener">LinkedIn ↗</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var clips=[].slice.call(document.querySelectorAll('.hero .clip'));
+  var bars=[].slice.call(document.querySelectorAll('.hero .bars i'));
+  var cap=document.getElementById('heroCap');
+  if(!clips.length) return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){ clips[0].removeAttribute('autoplay'); bars[0]&&(bars[0].style.width='100%'); return; }
+  var DUR=6000, i=0, timer=null;
+  function load(v){ if(v.dataset.src&&!v.getAttribute('src')){ v.src=v.dataset.src; v.preload='auto'; } }
+  function caption(n){ var p=clips[n].dataset.cap.split('|'); cap.style.opacity=0;
+    setTimeout(function(){ cap.innerHTML='<b>'+p[0]+'</b>'+p[1]; cap.style.opacity=1; },260); }
+  function show(n){
+    clips.forEach(function(v,k){ v.classList.toggle('on',k===n); if(k===n){ load(v); try{v.currentTime=0;}catch(e){} var pr=v.play(); if(pr&&pr.catch)pr.catch(function(){}); } else { v.pause(); } });
+    load(clips[(n+1)%clips.length]);
+    caption(n);
+    bars.forEach(function(b,k){ b.style.transition='none'; b.style.width=k<n?'100%':'0'; });
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ bars[n].style.transition='width '+DUR+'ms linear'; bars[n].style.width='100%'; }); });
+  }
+  function start(){ stop(); timer=setInterval(function(){ i=(i+1)%clips.length; show(i); },DUR); }
+  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  show(0); start();
+  document.addEventListener('visibilitychange',function(){ if(document.hidden){ stop(); clips[i].pause(); } else { show(i); start(); } });
+})();
+</script>
+<script>
+(function(){
+  var nav=document.querySelector('.nav'), hero=document.getElementById('top');
+  if(nav&&hero){
+    var set=function(){ nav.classList.toggle('solid', window.scrollY > hero.offsetHeight - 90); };
+    set(); window.addEventListener('scroll',set,{passive:true}); window.addEventListener('resize',set);
+  } else if(nav){ nav.classList.add('solid'); }
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
